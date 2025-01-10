@@ -1,0 +1,9 @@
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.GeneratedMSBuildEditorConfig.editorconfig
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.AssemblyInfoInputs.cache
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.AssemblyInfo.cs
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.csproj.CoreCompileInputs.cache
+E:\dotnet\LayeredTerrain\LayeredTerrain\bin\Debug\netstandard2.1\LayeredTerrain.deps.json
+E:\dotnet\LayeredTerrain\LayeredTerrain\bin\Debug\netstandard2.1\LayeredTerrain.dll
+E:\dotnet\LayeredTerrain\LayeredTerrain\bin\Debug\netstandard2.1\LayeredTerrain.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.dll
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.pdb

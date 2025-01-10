@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = LayeredTerrainUtilities
+build_property.ProjectDir = E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

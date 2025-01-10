@@ -1,0 +1,13 @@
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\bin\Debug\netstandard2.1\LayeredTerrainUtilities.deps.json
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\bin\Debug\netstandard2.1\LayeredTerrainUtilities.dll
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\bin\Debug\netstandard2.1\LayeredTerrainUtilities.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\bin\Debug\netstandard2.1\LayeredTerrain.dll
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\bin\Debug\netstandard2.1\LayeredTerrain.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.csproj.AssemblyReference.cache
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.GeneratedMSBuildEditorConfig.editorconfig
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.AssemblyInfoInputs.cache
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.AssemblyInfo.cs
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.csproj.CoreCompileInputs.cache
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredT.C69C829F.Up2Date
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.dll
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.pdb
