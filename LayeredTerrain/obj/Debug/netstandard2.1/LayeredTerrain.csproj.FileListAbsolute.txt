@@ -7,3 +7,4 @@ E:\dotnet\LayeredTerrain\LayeredTerrain\bin\Debug\netstandard2.1\LayeredTerrain.
 E:\dotnet\LayeredTerrain\LayeredTerrain\bin\Debug\netstandard2.1\LayeredTerrain.pdb
 E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.dll
 E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrain\obj\Debug\netstandard2.1\LayeredTerrain.sourcelink.json

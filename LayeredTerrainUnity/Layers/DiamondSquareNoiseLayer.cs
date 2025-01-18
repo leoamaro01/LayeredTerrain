@@ -10,13 +10,14 @@ namespace LayeredTerrainUnity.Layers
         [SerializeField]
         [Range(0f, 1f)]
         private float smoothness;
-
         [SerializeField]
         private float randomRange, minValue, maxValue;
+        [SerializeField]
+        private int seedModifier;
 
         public override float[,] LayerCompute(int x, int y, int width, int height, int seed, Feature[] dependencyFeatures, Layer[] dependencyLayers)
         {
-            return NoiseLayerComputes.DiamondSquareNoise(x, y, width, height, seed, smoothness, randomRange, minValue, maxValue);
+            return NoiseLayerComputes.DiamondSquareNoise(x, y, width, height, seed + seedModifier, smoothness, randomRange, minValue, maxValue);
         }
     }
 }

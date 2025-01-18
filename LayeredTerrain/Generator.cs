@@ -46,6 +46,8 @@ namespace LayeredTerrain
 
                 namedFeatures[opt.FeatureName] = Features[index];
             }
+
+
         }
 
         public Feature this[string name]

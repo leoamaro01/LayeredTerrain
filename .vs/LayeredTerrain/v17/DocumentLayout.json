@@ -3,32 +3,64 @@
   "WorkspaceRootPath": "E:\\dotnet\\LayeredTerrain\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\modifiers\\noopmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\modifiers\\noopmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\modifiers\\powermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\modifiers\\powermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\whitenoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\whitenoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|e:\\dotnet\\layeredterrain\\layeredterrainutilities\\noiselayercomputes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|solutionrelative:layeredterrainutilities\\noiselayercomputes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\featureresultlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\featureresultlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\waterproximitylayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\waterproximitylayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\chunkcached.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\chunkcached.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\waterfromelevationlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\waterfromelevationlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\dependencyresolve\\dependencyresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\dependencyresolve\\dependencyresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\blends\\rivercarveblend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\blends\\rivercarveblend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\blends\\additionlayerblend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\blends\\additionlayerblend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|e:\\dotnet\\layeredterrain\\layeredterrainutilities\\layeredterrainutilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|solutionrelative:layeredterrainutilities\\layeredterrainutilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\wavyworleynoiseedgeslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\wavyworleynoiseedgeslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\wavyworleynoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\wavyworleynoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterrainfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterrainfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|e:\\dotnet\\layeredterrain\\layeredterrainutilities\\noiselayercomputes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|solutionrelative:layeredterrainutilities\\noiselayercomputes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\modifiers\\noopmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\modifiers\\noopmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layers\\perlinnoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,16 +71,24 @@
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layers\\diamondsquarenoiselayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\modifiers\\powermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\modifiers\\powermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|e:\\dotnet\\layeredterrain\\layeredterrainutilities\\layeredterrainutilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|solutionrelative:layeredterrainutilities\\layeredterrainutilities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterrainfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterrainfeature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\modifiers\\scalelayermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\modifiers\\scalelayermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterrainlayermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterrainlayermodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\feature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\featureoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{0D31D332-B4F9-4EA6-BB75-B85A457338C7}|LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj|solutionrelative:layeredterrainutilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\generator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|e:\\dotnet\\layeredterrain\\layeredterrainunity\\layeredterrainlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterrainlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,22 +111,18 @@
       "RelativeMoniker": "D:0:0:{DCA0CF3B-33F0-4A67-B828-BEC34233259C}|LayeredTerrainUnity\\LayeredTerrainUnity.csproj|solutionrelative:layeredterrainunity\\layeredterrainlayerblend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\dependencyresolve\\dependencyresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\dependencyresolve\\dependencyresolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|e:\\dotnet\\layeredterrain\\layeredterrain\\chunkcachedoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88ADB57E-F6A0-4FA9-A00F-914744B141F3}|LayeredTerrain\\LayeredTerrain.csproj|solutionrelative:layeredterrain\\chunkcachedoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 269,
-          "SelectedChildIndex": 7,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -102,58 +134,215 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NoiseLayerComputes.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\NoiseLayerComputes.cs",
-              "RelativeDocumentMoniker": "LayeredTerrainUtilities\\NoiseLayerComputes.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\NoiseLayerComputes.cs",
-              "RelativeToolTip": "LayeredTerrainUtilities\\NoiseLayerComputes.cs",
-              "ViewState": "AQIAAKkAAAAAAAAAAAAowMwAAABEAAAA",
+              "DocumentIndex": 3,
+              "Title": "WaterProximityLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WaterProximityLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\WaterProximityLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WaterProximityLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\WaterProximityLayer.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwv0gAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T05:07:06.563Z",
+              "WhenOpened": "2025-01-12T22:27:22.632Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LayeredTerrainGenerator.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAcwHoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T20:31:22.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Feature.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Feature.cs",
+              "RelativeDocumentMoniker": "LayeredTerrain\\Feature.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Feature.cs",
+              "RelativeToolTip": "LayeredTerrain\\Feature.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAGIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T01:48:55.126Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LayeredTerrainUtilities.csproj",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
-              "RelativeDocumentMoniker": "LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
-              "RelativeToolTip": "LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-09T04:19:01.109Z",
+              "Title": "ChunkCached.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\ChunkCached.cs",
+              "RelativeDocumentMoniker": "LayeredTerrain\\ChunkCached.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\ChunkCached.cs",
+              "RelativeToolTip": "LayeredTerrain\\ChunkCached.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAmwGkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T05:23:38.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FeatureResultLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\FeatureResultLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\FeatureResultLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\FeatureResultLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\FeatureResultLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T02:51:03.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdditionLayerBlend.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
-              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
-              "RelativeToolTip": "LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
+              "DocumentIndex": 1,
+              "Title": "WhiteNoiseLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WhiteNoiseLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\WhiteNoiseLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WhiteNoiseLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\WhiteNoiseLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T04:19:23.07Z",
+              "WhenOpened": "2025-01-16T02:54:42.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Generator.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Generator.cs",
+              "RelativeDocumentMoniker": "LayeredTerrain\\Generator.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Generator.cs",
+              "RelativeToolTip": "LayeredTerrain\\Generator.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T01:17:46.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WaterFromElevationLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WaterFromElevationLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\WaterFromElevationLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WaterFromElevationLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\WaterFromElevationLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T22:22:13.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DependencyResolver.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
+              "RelativeDocumentMoniker": "LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
+              "RelativeToolTip": "LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T01:33:21.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RiverCarveBlend.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\RiverCarveBlend.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Blends\\RiverCarveBlend.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\RiverCarveBlend.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Blends\\RiverCarveBlend.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T02:14:54.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdditionLayerBlend.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Blends\\AdditionLayerBlend.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T04:19:23.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WavyWorleyNoiseLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WavyWorleyNoiseLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\WavyWorleyNoiseLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WavyWorleyNoiseLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\WavyWorleyNoiseLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T02:06:57.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WavyWorleyNoiseEdgesLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WavyWorleyNoiseEdgesLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\WavyWorleyNoiseEdgesLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\WavyWorleyNoiseEdgesLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\WavyWorleyNoiseEdgesLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAACVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T00:47:43.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NoiseLayerComputes.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\NoiseLayerComputes.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUtilities\\NoiseLayerComputes.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\NoiseLayerComputes.cs",
+              "RelativeToolTip": "LayeredTerrainUtilities\\NoiseLayerComputes.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwH0BAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T05:07:06.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NoOpModifier.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T03:58:55.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "PerlinNoiseLayer.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\PerlinNoiseLayer.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\PerlinNoiseLayer.cs",
               "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\PerlinNoiseLayer.cs",
               "RelativeToolTip": "LayeredTerrainUnity\\Layers\\PerlinNoiseLayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-07T04:55:44.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
+              "Title": "DiamondSquareNoiseLayer.cs",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
+              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
+              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T04:59:32.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "PowerModifier.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\PowerModifier.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\Modifiers\\PowerModifier.cs",
@@ -161,37 +350,23 @@
               "RelativeToolTip": "LayeredTerrainUnity\\Modifiers\\PowerModifier.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:52:54.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:52:54.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NoOpModifier.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
-              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
-              "RelativeToolTip": "LayeredTerrainUnity\\Modifiers\\NoOpModifier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:58:55.601Z",
-              "EditorCaption": ""
+              "DocumentIndex": 18,
+              "Title": "LayeredTerrainUtilities.csproj",
+              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
+              "RelativeDocumentMoniker": "LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
+              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
+              "RelativeToolTip": "LayeredTerrainUtilities\\LayeredTerrainUtilities.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T04:19:01.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LayeredTerrainGenerator.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
-              "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
-              "RelativeToolTip": "LayeredTerrainUnity\\LayeredTerrainGenerator.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAwwMUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T20:31:22.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "LayeredTerrainFeature.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainFeature.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainFeature.cs",
@@ -203,19 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DiamondSquareNoiseLayer.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
-              "RelativeDocumentMoniker": "LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
-              "RelativeToolTip": "LayeredTerrainUnity\\Layers\\DiamondSquareNoiseLayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T04:59:32.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "ScaleLayerModifier.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\Modifiers\\ScaleLayerModifier.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\Modifiers\\ScaleLayerModifier.cs",
@@ -227,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "LayeredTerrainLayerModifier.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainLayerModifier.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainLayerModifier.cs",
@@ -239,19 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Feature.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Feature.cs",
-              "RelativeDocumentMoniker": "LayeredTerrain\\Feature.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Feature.cs",
-              "RelativeToolTip": "LayeredTerrain\\Feature.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T01:48:55.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "FeatureOptions.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\FeatureOptions.cs",
               "RelativeDocumentMoniker": "LayeredTerrain\\FeatureOptions.cs",
@@ -263,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "Layer.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Layer.cs",
               "RelativeDocumentMoniker": "LayeredTerrain\\Layer.cs",
@@ -275,19 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DependencyResolver.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
-              "RelativeDocumentMoniker": "LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
-              "RelativeToolTip": "LayeredTerrain\\DependencyResolve\\DependencyResolver.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAjwCoAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T01:33:21.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "Utils.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUtilities\\Utils.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUtilities\\Utils.cs",
@@ -299,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "ChunkCachedOptions.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\ChunkCachedOptions.cs",
               "RelativeDocumentMoniker": "LayeredTerrain\\ChunkCachedOptions.cs",
@@ -311,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "LayeredTerrainLayerBlend.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainLayerBlend.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainLayerBlend.cs",
@@ -323,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "LayeredTerrainLayer.cs",
               "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrainUnity\\LayeredTerrainLayer.cs",
               "RelativeDocumentMoniker": "LayeredTerrainUnity\\LayeredTerrainLayer.cs",
@@ -332,18 +471,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-02T23:40:08.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Generator.cs",
-              "DocumentMoniker": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Generator.cs",
-              "RelativeDocumentMoniker": "LayeredTerrain\\Generator.cs",
-              "ToolTip": "E:\\dotnet\\LayeredTerrain\\LayeredTerrain\\Generator.cs",
-              "RelativeToolTip": "LayeredTerrain\\Generator.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCYAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T01:17:46.695Z"
             }
           ]
         }

@@ -9,10 +9,12 @@ namespace LayeredTerrainUnity.Layers
     {
         [SerializeField]
         private int resolution;
+        [SerializeField]
+        private int seedModifier;
 
         public override float[,] LayerCompute(int x, int y, int width, int height, int seed, Feature[] dependencyFeatures, Layer[] dependencyLayers)
         {
-            return NoiseLayerComputes.PerlinNoise(x, y, width, height, seed, resolution);
+            return NoiseLayerComputes.PerlinNoise(x, y, width, height, seed + seedModifier, resolution);
         }
     }
 }

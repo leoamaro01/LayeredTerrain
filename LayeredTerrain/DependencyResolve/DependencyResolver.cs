@@ -8,6 +8,7 @@ namespace LayeredTerrain.DependencyResolve
     {
         private readonly Dictionary<string, int> items = new Dictionary<string, int>();
         private readonly List<HashSet<int>> adj = new List<HashSet<int>>();
+        private readonly List<HashSet<int>> dependencies = new List<HashSet<int>>();
         private readonly List<string> strings = new List<string>();
 
         public void AddItem(string item)
@@ -18,6 +19,7 @@ namespace LayeredTerrain.DependencyResolve
             strings.Add(item);
             items[item] = items.Count;
             adj.Add(new HashSet<int>());
+            dependencies.Add(new HashSet<int>());
         }
 
         public void AddDependencies(string dependent, params string[] dependencies)
@@ -34,13 +36,13 @@ namespace LayeredTerrain.DependencyResolve
             if (!items.ContainsKey(dependency))
                 throw new ArgumentException($"'{dependency}' has not been added to this DependencyResolver", nameof(dependency));
 
-
             adj[items[dependency]].Add(items[dependent]);
+            dependencies[items[dependent]].Add(items[dependency]);
         }
 
         public IEnumerable<string> GetDependencies(string dependent)
         {
-            return adj[items[dependent]].Select(i => strings[i]);
+            return dependencies[items[dependent]].Select(i => strings[i]);
         }
 
         public string[] Solve()
@@ -68,12 +70,27 @@ namespace LayeredTerrain.DependencyResolve
                     indegrees[n] -= 1;
 
                     if (indegrees[n] == 0)
-                        q.Enqueue(item);
+                        q.Enqueue(n);
                 }
             }
 
             if (resultPtr != result.Length)
-                throw new InvalidOperationException("Circular dependency found");
+            {
+                string itemsString = string.Join(", ", strings);
+                string adjacency = "";
+                for (var i = 0; i < adj.Count; i++)
+                {
+                    adjacency += strings[i] + ": [ ";
+
+                    foreach (var item in adj[i])
+                        adjacency += strings[item] + " ";
+
+                    adjacency += "]\n";
+                }
+                string resultString = string.Join(", ", result);
+
+                throw new InvalidOperationException($"Circular dependency found\nItems: {itemsString}\nAdjacency Lists:\n{adjacency}\nResult: {resultString}\nResult Length: {result.Length}\nResult Pointer: {resultPtr}");
+            }
 
             return result;
         }

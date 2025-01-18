@@ -78,7 +78,21 @@
             var cacheX = x - cacheMinX;
             var cacheY = y - cacheMinY;
 
-            chunk = chunkCache[cacheX, cacheY];
+            var cached = chunkCache[cacheX, cacheY];
+
+            if (cached == null)
+                return false;
+
+            var width = cached.GetLength(0);
+            var height = cached.GetLength(1);
+
+            chunk = new float[width, height];
+
+            for (var i = 0; i < width; i++)
+                for (var e = 0; e < height; e++)
+                {
+                    chunk[i, e] = cached[i, e];
+                }
 
             return chunk != null;
         }
@@ -88,7 +102,17 @@
             var cacheX = x - cacheMinX;
             var cacheY = y - cacheMinY;
 
-            chunkCache[cacheX, cacheY] = item;
+            var width = item.GetLength(0);
+            var height = item.GetLength(1);
+            var cached = new float[width, height];
+
+            for (var i = 0; i < width; i++)
+                for (var e = 0; e < height; e++)
+                {
+                    cached[i, e] = item[i, e];
+                }
+
+            chunkCache[cacheX, cacheY] = cached;
         }
     }
 }

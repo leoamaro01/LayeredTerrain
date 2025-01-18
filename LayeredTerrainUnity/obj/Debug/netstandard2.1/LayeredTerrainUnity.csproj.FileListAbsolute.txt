@@ -17,3 +17,4 @@ E:\dotnet\LayeredTerrain\LayeredTerrainUnity\bin\Debug\netstandard2.1\LayeredTer
 E:\dotnet\LayeredTerrain\LayeredTerrainUnity\obj\Debug\netstandard2.1\LayeredT.7EC790E9.Up2Date
 E:\dotnet\LayeredTerrain\LayeredTerrainUnity\obj\Debug\netstandard2.1\LayeredTerrainUnity.dll
 E:\dotnet\LayeredTerrain\LayeredTerrainUnity\obj\Debug\netstandard2.1\LayeredTerrainUnity.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrainUnity\obj\Debug\netstandard2.1\LayeredTerrainUnity.sourcelink.json

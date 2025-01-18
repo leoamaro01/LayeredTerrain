@@ -246,10 +246,10 @@ namespace LayeredTerrain.Utilities
             var fadedX = Fade(coords.X);
             var fadedY = Fade(coords.Y);
 
-            var xInterpolation0 = Interpolate(clockwiseDots[0], clockwiseDots[1], fadedX);
-            var xInterpolation1 = Interpolate(clockwiseDots[3], clockwiseDots[2], fadedX);
+            var xInterpolation0 = Lerp(clockwiseDots[0], clockwiseDots[1], fadedX);
+            var xInterpolation1 = Lerp(clockwiseDots[3], clockwiseDots[2], fadedX);
 
-            return (1 + Interpolate(xInterpolation0, xInterpolation1, fadedY)) * 0.5f;
+            return (1 + Lerp(xInterpolation0, xInterpolation1, fadedY)) * 0.5f;
         }
 
         private static float Fade(float t)
@@ -258,9 +258,226 @@ namespace LayeredTerrain.Utilities
             return t * t * t * (t * (t * 6 - 15) + 10);
         }
 
-        private static float Interpolate(float a, float b, float t)
+        private static float Lerp(float a, float b, float t)
         {
             return a + t * (b - a);
+        }
+
+        public static float[,] WorleyNoiseNormal(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float maxDistance, bool inverse)
+        {
+            return WorleyNoise(x, y, width, height, seed, cellWidth, cellHeight, minDistance, maxDistance, inverse, (a, b) => (a - b).LengthSquared(), MathF.Sqrt);
+        }
+
+        public static float[,] WorleyNoiseWavy(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float maxWaveAmplitudeDistance, float minDistance, float maxDistance, bool inverse, float waveFrequency, float waveAmplitude)
+        {
+            return WorleyNoise(x, y, width, height, seed, cellWidth, cellHeight, minDistance, maxDistance, inverse,
+                (a, b) =>
+                {
+                    var dif = a - b;
+                    var dist = dif.Length();
+                    var cos = dif.X / dist;
+                    var amplitude = waveAmplitude * (MathF.Min(dist, maxWaveAmplitudeDistance) / maxWaveAmplitudeDistance);
+                    return dist + amplitude * MathF.Cos(waveFrequency * MathF.Acos(cos));
+                }, d => d);
+        }
+
+        public static float[,] WorleyNoise(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float maxDistance, bool inverse, Func<Vector2, Vector2, float> norm, Func<float, float> normDeSquare)
+        {
+            var baseX = x * (width - 1);
+            var baseY = y * (height - 1);
+
+
+            // Add a cell on every side to account for a margin
+            var gridMinX = (int)MathF.Floor((float)baseX / cellWidth) * cellWidth - cellWidth;
+            var gridMinY = (int)MathF.Floor((float)baseY / cellHeight) * cellHeight - cellHeight;
+
+            var gridMaxX = (int)MathF.Ceiling((float)(baseX + width) / cellWidth) * cellWidth + cellWidth;
+            var gridMaxY = (int)MathF.Ceiling((float)(baseY + height) / cellHeight) * cellHeight + cellHeight;
+
+            var gridWidth = ((gridMaxX - gridMinX) / cellWidth);
+            var gridHeight = ((gridMaxY - gridMinY) / cellHeight);
+
+            var gridPoints = new Vector2[gridWidth, gridHeight];
+
+            for (var i = 0; i < gridWidth; i++)
+                for (var e = 0; e < gridHeight; e++)
+                {
+                    var cellX = gridMinX + i * cellWidth;
+                    var cellY = gridMinY + e * cellHeight;
+
+                    var cellSeed = Utils.GetCombinedSeed(cellX, cellY, seed);
+                    var cellRandom = new Random(cellSeed);
+
+                    gridPoints[i, e] = new Vector2(cellX + (float)cellRandom.NextDouble() * cellWidth, cellY + (float)cellRandom.NextDouble() * cellHeight);
+                }
+
+            var result = new float[width, height];
+
+            for (var i = 1; i < gridWidth - 1; i++)
+                for (var e = 1; e < gridHeight - 1; e++)
+                {
+                    var cellX = gridMinX + i * cellWidth;
+                    var cellY = gridMinY + e * cellHeight;
+
+                    var startX = Math.Max(baseX, cellX);
+                    var startY = Math.Max(baseY, cellY);
+
+                    var stopX = Math.Min(baseX + width, cellX + cellWidth);
+                    var stopY = Math.Min(baseY + height, cellY + cellHeight);
+
+                    for (var pointX = startX; pointX < stopX; pointX++)
+                        for (var pointY = startY; pointY < stopY; pointY++)
+                        {
+                            var closestDistanceSquared = -1f;
+
+                            var pointPos = new Vector2(pointX, pointY);
+
+                            for (var h = -1; h <= 1; h++)
+                                for (var v = -1; v <= 1; v++)
+                                {
+                                    var cellPointPos = gridPoints[i + h, e + v];
+
+                                    var distSqr = norm(cellPointPos, pointPos);
+
+                                    if (closestDistanceSquared < 0 || distSqr < closestDistanceSquared)
+                                        closestDistanceSquared = distSqr;
+                                }
+
+                            var dist = normDeSquare(closestDistanceSquared);
+
+                            float value;
+                            if (dist < minDistance)
+                                value = 0f;
+                            else if (dist > maxDistance)
+                                value = 1f;
+                            else
+                                value = (dist - minDistance) / (maxDistance - minDistance);
+
+                            if (inverse)
+                                value = 1 - value;
+
+                            value = Fade(value);
+
+                            result[pointX - baseX, pointY - baseY] = value;
+                        }
+                }
+
+            return result;
+        }
+
+        public static float[,] WorleyNoiseNormalEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse)
+        {
+            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, minDistance, minDifThreshold, maxDifThreshold, inverse, (a, b) => (a - b).LengthSquared(), MathF.Sqrt);
+        }
+
+        public static float[,] WorleyNoiseWavyEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float maxWaveAmplitudeDistance, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, float waveFrequency, float waveAmplitude)
+        {
+            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, minDistance, minDifThreshold, maxDifThreshold, inverse,
+                (a, b) =>
+                {
+                    var dif = a - b;
+                    var dist = dif.Length();
+                    var cos = dif.X / dist;
+                    var amplitude = waveAmplitude * (MathF.Min(dist, maxWaveAmplitudeDistance) / maxWaveAmplitudeDistance);
+                    return dist + amplitude * MathF.Cos(waveFrequency * MathF.Acos(cos));
+                }, d => d);
+        }
+
+        public static float[,] WorleyNoiseEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, Func<Vector2, Vector2, float> norm, Func<float, float> normDeSquare)
+        {
+            var baseX = x * (width - 1);
+            var baseY = y * (height - 1);
+
+
+            // Add a cell on every side to account for a margin
+            var gridMinX = (int)MathF.Floor((float)baseX / cellWidth) * cellWidth - cellWidth;
+            var gridMinY = (int)MathF.Floor((float)baseY / cellHeight) * cellHeight - cellHeight;
+
+            var gridMaxX = (int)MathF.Ceiling((float)(baseX + width) / cellWidth) * cellWidth + cellWidth;
+            var gridMaxY = (int)MathF.Ceiling((float)(baseY + height) / cellHeight) * cellHeight + cellHeight;
+
+            var gridWidth = ((gridMaxX - gridMinX) / cellWidth);
+            var gridHeight = ((gridMaxY - gridMinY) / cellHeight);
+
+            var gridPoints = new Vector2[gridWidth, gridHeight];
+
+            for (var i = 0; i < gridWidth; i++)
+                for (var e = 0; e < gridHeight; e++)
+                {
+                    var cellX = gridMinX + i * cellWidth;
+                    var cellY = gridMinY + e * cellHeight;
+
+                    var cellSeed = Utils.GetCombinedSeed(cellX, cellY, seed);
+                    var cellRandom = new Random(cellSeed);
+
+                    gridPoints[i, e] = new Vector2(cellX + (float)cellRandom.NextDouble() * cellWidth, cellY + (float)cellRandom.NextDouble() * cellHeight);
+                }
+
+            var result = new float[width, height];
+
+            for (var i = 1; i < gridWidth - 1; i++)
+                for (var e = 1; e < gridHeight - 1; e++)
+                {
+                    var cellX = gridMinX + i * cellWidth;
+                    var cellY = gridMinY + e * cellHeight;
+
+                    var startX = Math.Max(baseX, cellX);
+                    var startY = Math.Max(baseY, cellY);
+
+                    var stopX = Math.Min(baseX + width, cellX + cellWidth);
+                    var stopY = Math.Min(baseY + height, cellY + cellHeight);
+
+                    for (var pointX = startX; pointX < stopX; pointX++)
+                        for (var pointY = startY; pointY < stopY; pointY++)
+                        {
+                            var closestDistanceSquared = -1f;
+                            var secondClosestDistanceSquared = -1f;
+
+                            var pointPos = new Vector2(pointX, pointY);
+
+                            for (var h = -1; h <= 1; h++)
+                                for (var v = -1; v <= 1; v++)
+                                {
+                                    var cellPointPos = gridPoints[i + h, e + v];
+
+                                    var distSqr = norm(cellPointPos, pointPos);
+
+                                    if (closestDistanceSquared < 0 || distSqr < closestDistanceSquared)
+                                    {
+                                        secondClosestDistanceSquared = closestDistanceSquared;
+                                        closestDistanceSquared = distSqr;
+                                    }
+                                    else if (secondClosestDistanceSquared < 0 || distSqr < secondClosestDistanceSquared)
+                                    {
+                                        secondClosestDistanceSquared = distSqr;
+                                    }
+                                }
+
+                            var dist = normDeSquare(closestDistanceSquared);
+                            var secondDist = normDeSquare(secondClosestDistanceSquared);
+                            var dif = MathF.Abs(secondDist - dist);
+
+                            float value;
+
+                            if (dist < minDistance)
+                                value = 0f;
+                            else if (dif >= maxDifThreshold)
+                                value = 0f;
+                            else if (dif <= minDifThreshold)
+                                value = 1f;
+                            else
+                                value = (maxDifThreshold - dif) / (maxDifThreshold - minDifThreshold);
+
+                            if (inverse)
+                                value = 1 - value;
+
+                            value = Fade(value);
+
+                            result[pointX - baseX, pointY - baseY] = value;
+                        }
+                }
+
+            return result;
         }
     }
 }

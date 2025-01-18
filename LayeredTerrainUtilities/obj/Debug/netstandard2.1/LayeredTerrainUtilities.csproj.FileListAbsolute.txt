@@ -11,3 +11,4 @@ E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\Layere
 E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredT.C69C829F.Up2Date
 E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.dll
 E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.pdb
+E:\dotnet\LayeredTerrain\LayeredTerrainUtilities\obj\Debug\netstandard2.1\LayeredTerrainUtilities.sourcelink.json
