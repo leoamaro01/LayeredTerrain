@@ -35,7 +35,7 @@ namespace LayeredTerrainUnity
         [SerializeField]
         private int chunkViewDistance, chunksGeneratedPerFrame;
 
-        private Generator terrainGenerator;
+        public Generator terrainGenerator;
 
         private Thread chunkGenThread;
         private Vector2Int playerChunkPosition;
@@ -199,15 +199,18 @@ namespace LayeredTerrainUnity
 
             float[,] heights = new float[chunkSize, chunkSize];
 
-            float[,] chunkHeights, vegetationData, waterData;
+            float[,] chunkHeights, vegetationData = null, waterData = null;
 
             var treeInstances = new List<TreeInstance>();
 
             lock (terrainGenerator)
             {
                 chunkHeights = terrainGenerator[heightsFeature.featureName][x, y];
-                vegetationData = terrainGenerator[vegetationFeature.featureName][x, y];
-                waterData = terrainGenerator[waterFeature.featureName][x, y];
+
+                if (vegetationFeature != null)
+                    vegetationData = terrainGenerator[vegetationFeature.featureName][x, y];
+                if (waterFeature != null)
+                    waterData = terrainGenerator[waterFeature.featureName][x, y];
             }
 
 
@@ -217,47 +220,49 @@ namespace LayeredTerrainUnity
                     heights[e, i] = chunkHeights[i, e];
                 }
 
-            var treeCells = Mathf.FloorToInt(chunkSize / treeScattering);
+            if (vegetationFeature != null && waterFeature != null)
+            {
+                var treeCells = Mathf.FloorToInt(chunkSize / treeScattering);
 
-            var treeUnit = 1f / treeCells;
+                var treeUnit = 1f / treeCells;
 
-            for (var i = 0; i < treeCells; i++)
-                for (var e = 0; e < treeCells; e++)
-                {
-                    var chunkX = Mathf.RoundToInt(((float)i / treeCells) * chunkSize);
-                    var chunkY = Mathf.RoundToInt(((float)e / treeCells) * chunkSize);
-
-                    if (vegetationData[chunkX, chunkY] > vegetationThreshold &&
-                        waterData[chunkX, chunkY] < 0.5f)
+                for (var i = 0; i < treeCells; i++)
+                    for (var e = 0; e < treeCells; e++)
                     {
-                        var treeRandomSeed = Utils.GetCombinedSeed(x * treeCells + i, y * treeCells + e, seed);
-                        var treeRandom = new System.Random(treeRandomSeed);
+                        var chunkX = Mathf.RoundToInt(((float)i / treeCells) * chunkSize);
+                        var chunkY = Mathf.RoundToInt(((float)e / treeCells) * chunkSize);
 
-                        var treePosOffset = new Vector2(((float)treeRandom.NextDouble() - 0.5f) * treeUnit * 0.25f, ((float)treeRandom.NextDouble() - 0.5f) * treeUnit * 0.25f);
-
-                        var treePrototypeIndex = treeRandom.Next(treePrefabs.Length);
-
-                        var treeScale = 1 + ((float)treeRandom.NextDouble() - 0.5f) * 0.5f;
-
-                        var rotation = (float)treeRandom.NextDouble() * 2f * Mathf.PI;
-
-                        var pos = new Vector3(treeUnit * 0.5f + treeUnit * i + treePosOffset.x, 0, treeUnit * 0.5f + treeUnit * e + treePosOffset.y);
-
-                        var instance = new TreeInstance()
+                        if (vegetationData[chunkX, chunkY] > vegetationThreshold &&
+                            waterData[chunkX, chunkY] < 0.5f)
                         {
-                            heightScale = treeScale,
-                            widthScale = treeScale,
-                            color = Color.white,
-                            lightmapColor = Color.white,
-                            position = pos,
-                            prototypeIndex = treePrototypeIndex,
-                            rotation = rotation
-                        };
+                            var treeRandomSeed = Utils.GetCombinedSeed(x * treeCells + i, y * treeCells + e, seed);
+                            var treeRandom = new System.Random(treeRandomSeed);
 
-                        treeInstances.Add(instance);
+                            var treePosOffset = new Vector2(((float)treeRandom.NextDouble() - 0.5f) * treeUnit * 0.25f, ((float)treeRandom.NextDouble() - 0.5f) * treeUnit * 0.25f);
+
+                            var treePrototypeIndex = treeRandom.Next(treePrefabs.Length);
+
+                            var treeScale = 1 + ((float)treeRandom.NextDouble() - 0.5f) * 0.5f;
+
+                            var rotation = (float)treeRandom.NextDouble() * 2f * Mathf.PI;
+
+                            var pos = new Vector3(treeUnit * 0.5f + treeUnit * i + treePosOffset.x, 0, treeUnit * 0.5f + treeUnit * e + treePosOffset.y);
+
+                            var instance = new TreeInstance()
+                            {
+                                heightScale = treeScale,
+                                widthScale = treeScale,
+                                color = Color.white,
+                                lightmapColor = Color.white,
+                                position = pos,
+                                prototypeIndex = treePrototypeIndex,
+                                rotation = rotation
+                            };
+
+                            treeInstances.Add(instance);
+                        }
                     }
-                }
-
+            }
             generatedChunks.Enqueue((x, y, heights, treeInstances.ToArray()));
         }
     }

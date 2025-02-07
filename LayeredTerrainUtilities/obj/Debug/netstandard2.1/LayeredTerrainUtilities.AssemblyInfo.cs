@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LayeredTerrainUtilities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b103f97211b341044c756fe5874c57b3ba5ce3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c371039ada07c3a7dbd7de230fc08c1af82bd7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LayeredTerrainUtilities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LayeredTerrainUtilities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

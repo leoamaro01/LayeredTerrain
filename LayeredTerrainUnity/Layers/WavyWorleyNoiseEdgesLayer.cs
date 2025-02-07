@@ -12,13 +12,13 @@ namespace LayeredTerrainUnity.Layers
         [SerializeField]
         private int cellWidth, cellHeight;
         [SerializeField]
-        private float maxWaveAmplitudeDistance, minDistance, minDifThreshold, maxDifThreshold, waveAmplitude, waveFrequency;
+        private float maxWaveAmplitudeDistance, minDistance, minDifThreshold, maxDifThreshold, waveAmplitude, waveFrequency, cellJitter;
         [SerializeField]
         private bool inverse;
 
         public override float[,] LayerCompute(int x, int y, int width, int height, int seed, Feature[] dependencyFeatures, Layer[] dependencyLayers)
         {
-            return NoiseLayerComputes.WorleyNoiseWavyEdges(x, y, width, height, seed + seedModifier, cellWidth, cellHeight, maxWaveAmplitudeDistance, minDistance, minDifThreshold, maxDifThreshold, inverse, waveFrequency, waveAmplitude);
+            return NoiseLayerComputes.WorleyNoiseWavyEdges(x, y, width, height, seed + seedModifier, cellWidth, cellHeight, cellJitter, maxWaveAmplitudeDistance, minDistance, minDifThreshold, maxDifThreshold, inverse, waveFrequency, waveAmplitude);
         }
     }
 }

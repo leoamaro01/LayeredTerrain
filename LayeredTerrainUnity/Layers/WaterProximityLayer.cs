@@ -17,7 +17,7 @@ namespace LayeredTerrainUnity.Layers
             int sourceGridMarginH = Mathf.CeilToInt((float)maxDistanceToWater / width);
             int sourceGridMarginV = Mathf.CeilToInt((float)maxDistanceToWater / height);
 
-            var sourceGrid = new int[width * (sourceGridMarginH * 2 + 1), height * (sourceGridMarginV * 2 + 1)];
+            var sourceGrid = new float[width * (sourceGridMarginH * 2 + 1), height * (sourceGridMarginV * 2 + 1)];
 
             var waterFeature = dependencyFeatures[0];
 
@@ -31,8 +31,8 @@ namespace LayeredTerrainUnity.Layers
                     for (var cellX = 0; cellX < width; cellX++)
                         for (var cellY = 0; cellY < height; cellY++)
                         {
-                            var posX = i + sourceGridMarginH + cellX;
-                            var posY = e + sourceGridMarginV + cellY;
+                            var posX = (i + sourceGridMarginH) * width + cellX;
+                            var posY = (e + sourceGridMarginV) * height + cellY;
 
                             var value = waterChunk[cellX, cellY] > 0.001f ? 0 : -1;
 
@@ -42,6 +42,9 @@ namespace LayeredTerrainUnity.Layers
                             sourceGrid[posX, posY] = value;
                         }
                 }
+
+
+            var diagonal = Mathf.Sqrt(2f);
 
             while (edge.Count > 0)
             {
@@ -55,10 +58,12 @@ namespace LayeredTerrainUnity.Layers
                         if (cellX + i < 0 || cellX + i >= sourceGrid.GetLength(0) || cellY + e < 0 || cellY + e >= sourceGrid.GetLength(1))
                             continue;
 
-                        if (sourceGrid[cellX + i, cellY + e] >= 0)
+
+                        var newValue = value + (i * e != 0 ? diagonal : 1);
+                        if (sourceGrid[cellX + i, cellY + e] <= newValue && sourceGrid[cellX + i, cellY + e] >= 0)
                             continue;
 
-                        sourceGrid[cellX + i, cellY + e] = value + 1;
+                        sourceGrid[cellX + i, cellY + e] = newValue;
                         edge.Enqueue((cellX + i, cellY + e));
                     }
             }
@@ -70,7 +75,10 @@ namespace LayeredTerrainUnity.Layers
                 {
                     var value = sourceGrid[sourceGridMarginH * width + i, sourceGridMarginV * height + e];
 
-                    result[i, e] = Mathf.Max(maxDistanceToWater - value, 0f) / maxDistanceToWater;
+                    if (value < 0)
+                        result[i, e] = 0f;
+                    else
+                        result[i, e] = Mathf.Max(maxDistanceToWater - value, 0f) / maxDistanceToWater;
                 }
 
             return result;

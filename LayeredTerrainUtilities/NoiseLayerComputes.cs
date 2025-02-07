@@ -365,14 +365,14 @@ namespace LayeredTerrain.Utilities
             return result;
         }
 
-        public static float[,] WorleyNoiseNormalEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse)
+        public static float[,] WorleyNoiseNormalEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float cellJitter, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse)
         {
-            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, minDistance, minDifThreshold, maxDifThreshold, inverse, (a, b) => (a - b).LengthSquared(), MathF.Sqrt);
+            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, cellJitter, minDistance, minDifThreshold, maxDifThreshold, inverse, (a, b) => (a - b).LengthSquared(), MathF.Sqrt);
         }
 
-        public static float[,] WorleyNoiseWavyEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float maxWaveAmplitudeDistance, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, float waveFrequency, float waveAmplitude)
+        public static float[,] WorleyNoiseWavyEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float cellJitter, float maxWaveAmplitudeDistance, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, float waveFrequency, float waveAmplitude)
         {
-            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, minDistance, minDifThreshold, maxDifThreshold, inverse,
+            return WorleyNoiseEdges(x, y, width, height, seed, cellWidth, cellHeight, cellJitter, minDistance, minDifThreshold, maxDifThreshold, inverse,
                 (a, b) =>
                 {
                     var dif = a - b;
@@ -383,7 +383,7 @@ namespace LayeredTerrain.Utilities
                 }, d => d);
         }
 
-        public static float[,] WorleyNoiseEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, Func<Vector2, Vector2, float> norm, Func<float, float> normDeSquare)
+        public static float[,] WorleyNoiseEdges(int x, int y, int width, int height, int seed, int cellWidth, int cellHeight, float cellJitter, float minDistance, float minDifThreshold, float maxDifThreshold, bool inverse, Func<Vector2, Vector2, float> norm, Func<float, float> normDeSquare)
         {
             var baseX = x * (width - 1);
             var baseY = y * (height - 1);
@@ -410,7 +410,10 @@ namespace LayeredTerrain.Utilities
                     var cellSeed = Utils.GetCombinedSeed(cellX, cellY, seed);
                     var cellRandom = new Random(cellSeed);
 
-                    gridPoints[i, e] = new Vector2(cellX + (float)cellRandom.NextDouble() * cellWidth, cellY + (float)cellRandom.NextDouble() * cellHeight);
+                    var xPos = (1 - cellJitter) * 0.5f + (float)cellRandom.NextDouble() * cellJitter;
+                    var yPos = (1 - cellJitter) * 0.5f + (float)cellRandom.NextDouble() * cellJitter;
+
+                    gridPoints[i, e] = new Vector2(cellX + xPos * cellWidth, cellY + yPos * cellHeight);
                 }
 
             var result = new float[width, height];
@@ -459,14 +462,13 @@ namespace LayeredTerrain.Utilities
 
                             float value;
 
-                            if (dist < minDistance)
-                                value = 0f;
-                            else if (dif >= maxDifThreshold)
-                                value = 0f;
-                            else if (dif <= minDifThreshold)
+                            var difValue = (maxDifThreshold - dif) / (maxDifThreshold - minDifThreshold);
+                            var distValue = (dist - minDistance) / (maxDifThreshold - minDifThreshold);
+                            value = MathF.Min(distValue, difValue);
+                            if (value >= 1f)
                                 value = 1f;
-                            else
-                                value = (maxDifThreshold - dif) / (maxDifThreshold - minDifThreshold);
+                            else if (value <= 0f)
+                                value = 0f;
 
                             if (inverse)
                                 value = 1 - value;
@@ -479,6 +481,7 @@ namespace LayeredTerrain.Utilities
 
             return result;
         }
+
     }
 }
 

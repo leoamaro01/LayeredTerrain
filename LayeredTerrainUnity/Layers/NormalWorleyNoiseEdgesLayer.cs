@@ -12,13 +12,13 @@ namespace LayeredTerrainUnity.Layers
         [SerializeField]
         private int cellWidth, cellHeight;
         [SerializeField]
-        private float minDistance, minDifThreshold, maxDifThreshold;
+        private float minDistance, minDifThreshold, maxDifThreshold, cellJitter;
         [SerializeField]
         private bool inverse;
 
         public override float[,] LayerCompute(int x, int y, int width, int height, int seed, Feature[] dependencyFeatures, Layer[] dependencyLayers)
         {
-            return NoiseLayerComputes.WorleyNoiseNormalEdges(x, y, width, height, seed + seedModifier, cellWidth, cellHeight, minDistance, minDifThreshold, maxDifThreshold, inverse);
+            return NoiseLayerComputes.WorleyNoiseNormalEdges(x, y, width, height, seed + seedModifier, cellWidth, cellHeight, cellJitter, minDistance, minDifThreshold, maxDifThreshold, inverse);
         }
     }
 }
